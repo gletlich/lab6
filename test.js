@@ -19,7 +19,7 @@ describe("Post", () => {
     const res = await chai.request(app).post("/recipes").send(recipeOne);
 
     expect(res).to.have.status(201);
-    expect(_.pick(res.body, recipeKeys)).to.deep.equal(recipeOne);
+    expect(_.pick(res.body, recipeKeys)).to.deep.equal(recipeTwo);
   });
 });
 
