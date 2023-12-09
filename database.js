@@ -9,8 +9,9 @@ mongoose
     serverSelectionTimeoutMS: 5000,
   })
   .then(() => console.log("Connected"))
-  .catch(() => {
+  .catch((e) => {
     console.log("Connection error");
+    console.log(e);
     process.exit();
   });
 
